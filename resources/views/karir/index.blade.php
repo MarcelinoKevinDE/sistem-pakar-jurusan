@@ -38,6 +38,13 @@
             lalu memberikan rekomendasi jurusan kuliah yang paling sesuai.
         </p>
 
+        {{-- INFO MESSAGE (misal setelah refresh halaman hasil) --}}
+        @if (session('info'))
+            <div class="bg-yellowbrutal border-4 border-black shadow-brutalsm p-4 mb-6 font-bold">
+                ℹ️ {{ session('info') }}
+            </div>
+        @endif
+
         {{-- ERROR MESSAGES --}}
         @if ($errors->any())
             <div class="bg-white border-4 border-black shadow-brutal p-4 mb-8">
